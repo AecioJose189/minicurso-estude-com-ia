@@ -373,51 +373,62 @@ html[data-contraste="alto"] .autor__avatar { border: 1px solid var(--primaria); 
 
 /* Trilha de estudo */
 .trilha {
-  margin-top: 48px;
-  padding: 28px;
+  margin-top: 56px;
+  padding: 36px;
   background: var(--fundo);
   border: 1px solid var(--linha);
   border-radius: var(--raio);
 }
-.trilha__titulo { font-size: 1.4rem; margin-bottom: 4px; }
-.trilha__texto { color: var(--suave); margin-bottom: 20px; }
+/* Em telas grandes a trilha fica mais larga que o texto, para os cartões respirarem */
+@media (min-width: 1000px) {
+  .trilha {
+    position: relative;
+    left: 50%;
+    width: min(1100px, calc(100vw - 48px));
+    transform: translateX(-50%);
+  }
+}
+.trilha__titulo { font-size: 1.5rem; margin-bottom: 6px; }
+.trilha__texto { color: var(--suave); margin-bottom: 28px; }
 .trilha__lista {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-@media (min-width: 860px) {
+@media (min-width: 1000px) {
   .trilha__lista { grid-template-columns: repeat(5, 1fr); }
 }
 .trilha__lista a {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
   height: 100%;
-  padding: 14px;
+  padding: 22px 20px;
   background: var(--superficie);
   border: 1.5px solid var(--linha);
   border-radius: 12px;
+  box-shadow: var(--sombra);
   color: var(--texto);
   text-decoration: none;
   transition: border-color .15s, transform .15s;
 }
-.trilha__lista a:hover { border-color: var(--primaria); transform: translateY(-2px); }
-.trilha__lista strong { display: block; line-height: 1.25; }
-.trilha__lista small { display: block; color: var(--suave); font-size: 0.88rem; line-height: 1.35; margin-top: 4px; }
+.trilha__lista a:hover { border-color: var(--primaria); transform: translateY(-3px); }
+.trilha__lista strong { display: block; font-size: 1.08rem; line-height: 1.3; }
+.trilha__lista small { display: block; color: var(--suave); font-size: 0.92rem; line-height: 1.45; margin-top: 6px; }
 .trilha__num {
   flex: none;
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: var(--primaria);
   color: #fff;
   font-weight: 700;
+  font-size: 1.05rem;
 }
 
 /* =========================================================
@@ -796,7 +807,9 @@ html[data-contraste="alto"] .rodape { background: #000; border-top: 1px solid #f
   .container { padding: 0 16px; }
   .inicio { padding: 36px 0 44px; }
   .secao { padding: 48px 0; }
-  .trilha { padding: 20px 16px; }
+  .trilha { padding: 24px 16px; }
+  .trilha__lista { gap: 14px; }
+  .trilha__lista a { flex-direction: row; align-items: flex-start; padding: 16px; }
   .autor { align-items: flex-start; }
   .barra-acess__titulo { display: none; }
   .barra-acess__interno { justify-content: center; }
