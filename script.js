@@ -96,23 +96,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   });
 });
 
-// ===== Capítulos: pula o vídeo para o trecho escolhido =====
-var player = document.getElementById("player");
-var botoesCapitulo = document.querySelectorAll("[data-inicio]");
-
-botoesCapitulo.forEach(function (botao) {
-  botao.addEventListener("click", function () {
-    var url = new URL(player.src);
-    url.searchParams.set("start", botao.dataset.inicio);
-    url.searchParams.set("autoplay", "1");
-    player.src = url.toString();
-
-    botoesCapitulo.forEach(function (b) { b.removeAttribute("aria-current"); });
-    botao.setAttribute("aria-current", "true");
-    player.scrollIntoView({ behavior: "smooth", block: "center" });
-  });
-});
-
 // ===== Botão "Copiar prompt" =====
 document.querySelectorAll(".botao-copiar").forEach(function (botao) {
   botao.addEventListener("click", function () {

@@ -611,47 +611,6 @@ html[data-contraste="alto"] .video { border: 2px solid #fff; }
 .aviso svg { color: var(--primaria); flex: none; margin-top: 2px; }
 .nota { color: var(--suave); font-size: 0.98rem; }
 
-/* Capítulos clicáveis */
-.capitulos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--linha);
-  border-radius: var(--raio);
-  overflow: hidden;
-  background: var(--superficie);
-}
-.capitulos li + li { border-top: 1px solid var(--linha); }
-.capitulos button {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  min-height: 52px;
-  padding: 10px 18px;
-  font: inherit;
-  text-align: left;
-  color: var(--texto);
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
-.capitulos button:hover { background: var(--alt); }
-.capitulos button[aria-current="true"] { background: var(--primaria-clara); font-weight: 700; }
-.capitulos button:focus-visible { outline-offset: -3px; }
-.capitulos__tempo {
-  flex: none;
-  min-width: 76px;
-  padding: 2px 10px;
-  border-radius: 8px;
-  background: var(--alt);
-  border: 1px solid var(--linha);
-  color: var(--primaria);
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  text-align: center;
-}
-
 /* Ciclo DTPV */
 .ciclo {
   list-style: none;
