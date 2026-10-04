@@ -598,18 +598,6 @@ html[data-contraste="alto"] .video { border: 2px solid #fff; }
   border: 0;
 }
 
-.aviso {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin: 20px 0 0;
-  padding: 14px 18px;
-  background: var(--primaria-clara);
-  border: 1px solid var(--linha);
-  border-radius: 12px;
-}
-.aviso svg { color: var(--primaria); flex: none; margin-top: 2px; }
-.nota { color: var(--suave); font-size: 0.98rem; }
 
 /* Ciclo DTPV */
 .ciclo {
