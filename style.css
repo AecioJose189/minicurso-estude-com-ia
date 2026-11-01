@@ -475,6 +475,8 @@ html[data-contraste="alto"] .autor__avatar { border: 1px solid var(--primaria); 
 }
 .cartao h3 svg { color: var(--primaria); flex: none; }
 .cartao p:last-child { margin-bottom: 0; }
+.cartao--link { display: flex; flex-direction: column; align-items: flex-start; }
+.cartao--link .botao { margin-top: auto; }
 
 .lista-check { list-style: none; padding: 0; margin: 0; }
 .lista-check li {
