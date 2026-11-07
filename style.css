@@ -371,6 +371,37 @@ html[data-contraste="alto"] .autor__avatar { border: 1px solid var(--primaria); 
 }
 .info svg { color: var(--primaria); flex: none; }
 
+/* Acesso rápido (vídeo, e-book, infográfico, avaliação) */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 32px;
+}
+.acao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 20px;
+  background: var(--superficie);
+  color: var(--primaria);
+  border: 2px solid var(--primaria);
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s, color .15s, transform .15s;
+}
+.acao:hover { background: var(--primaria-clara); transform: translateY(-1px); }
+.acao--principal { background: var(--primaria); color: #fff; }
+.acao--principal:hover { background: var(--primaria-escura); border-color: var(--primaria-escura); color: #fff; }
+html[data-contraste="alto"] .acao { text-decoration: none; }
+html[data-contraste="alto"] .acao--principal,
+html[data-contraste="alto"] .acao--principal:hover { color: #000; }
+@media (max-width: 520px) {
+  .acao { flex: 1 1 100%; justify-content: center; }
+}
+
 /* Trilha de estudo */
 .trilha {
   margin-top: 56px;
